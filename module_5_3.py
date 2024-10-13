@@ -52,13 +52,11 @@ class House:
 
 
     def __iadd__(self, other):
-        self.number_of_floors += get_only_number(other)
-        return self
+        return self.__add__(other)
 
 
     def __radd__(self, other):
-        self.number_of_floors += get_only_number(other)
-        return self
+        return self.__add__(other)
 
 
     def go_to(self, new_floor):
